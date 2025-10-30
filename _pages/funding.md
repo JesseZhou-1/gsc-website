@@ -19,6 +19,6 @@ We support activities that benefit graduate students. All requests are public. F
 
 **Voting for large requests:**
 
-If the amount is at or above the threshold, a council officer will open a **Poll** in Discussions and link it here via a comment. After voting closes, we label the request `approved` or `rejected` and record the decision.
+If the amount is at or above the threshold, financial co-chairs will open a **Poll** in Discussions and link it here via a comment. After voting closes, we label the request `approved` or `rejected` and record the decision.
 
-**Contact:** Treasurer and Chair are tagged on each request. Use the comment thread to ask or answer questions.
+**Contact:** Financial co-chairs are tagged on each request. Use the comment thread to ask or answer questions.
