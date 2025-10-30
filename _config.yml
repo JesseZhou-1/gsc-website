@@ -1,4 +1,41 @@
 # Site basics
 locale: en
-url: "https://uchgsc.github.io"   # replace with your org
-baseurl: ""                       # keep empty on org.github.io
+url: "https://uchgsc.github.io"
+baseurl: ""  # use "/gsc-website" if this is a project site
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
+  - jekyll-include-cache
+
+# Pages and posts
+include:
+  - _pages
+defaults:
+  - scope: { path: "" }
+    values:
+      layout: single
+  - scope: { path: "_posts" }
+    values:
+      layout: single
+      comments: true
+
+# giscus comments
+comments:
+  provider: "giscus"
+  giscus:
+    repo: JesseZhou-1/gsc-website
+    repo_id: R_kgDOQL3Ydw
+    category: "Announcements"
+    category_id: "DIC_kwDOQL3Yd84CxPjE"
+    mapping: pathname
+    reactions_enabled: 1
+    emit_metadata: 0
+    input_position: bottom
+    theme: preferred_color_scheme
+    lang: en
