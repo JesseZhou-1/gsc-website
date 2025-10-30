@@ -1,7 +1,7 @@
 # Site basics
 locale: en
-url: "https://uchgsc.github.io"
-baseurl: ""  # use "/gsc-website" if this is a project site
+url: "https://jessezhou-1.github.io"
+baseurl: "/gsc-website"
 
 # Theme
 remote_theme: "mmistakes/minimal-mistakes"
