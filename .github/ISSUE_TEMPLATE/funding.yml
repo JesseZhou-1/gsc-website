@@ -1,0 +1,98 @@
+name: Funding request
+description: Apply for GSC funding. Your submission will be public for transparency.
+labels: [funding-request, pending-review]
+title: "Funding request: <event or project name>"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your request. This issue will be used to track review, discussion, and outcome.
+        Do not include sensitive personal information. Upload any receipts or quotes by linking to files in cloud storage.
+
+  - type: input
+    id: contact
+    attributes:
+      label: Main contact name and email
+      placeholder: "Jane Doe <janedoe@university.edu>"
+    validations:
+      required: true
+
+  - type: input
+    id: org
+    attributes:
+      label: Affiliated student group or sponsor (if any)
+      placeholder: "Graduate Economics Society"
+
+  - type: input
+    id: event
+    attributes:
+      label: Event or project title
+      placeholder: "Fall research mixer"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description and purpose
+      description: What is this for and who benefits?
+      placeholder: "Briefly describe goals, activities, and expected attendance."
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date(s)
+      placeholder: "2025-11-12"
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: "Saieh Hall, Room 112"
+
+  - type: input
+    id: amount
+    attributes:
+      label: Amount requested (USD, numbers only)
+      placeholder: "750"
+    validations:
+      required: true
+
+  - type: textarea
+    id: budget
+    attributes:
+      label: Line-item budget
+      description: List items and cost estimates. Example: food 400, supplies 150, speaker honorarium 200.
+    validations:
+      required: true
+
+  - type: textarea
+    id: funding
+    attributes:
+      label: Other funding sources (applied or committed)
+      placeholder: "Department co-sponsorship 200 (pending)"
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments (links)
+      description: Link to quotes, flyers, or supporting files.
+
+  - type: checkboxes
+    id: transparency
+    attributes:
+      label: Transparency
+      description: I confirm that this request may be publicly visible and discussed by the council.
+      options:
+        - label: I agree
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **What happens next**
+        1) Treasurer and Chair will review, ask questions, and label this issue.
+        2) If your amount is at or over the threshold, a council vote will be opened in Discussions.
+        3) Outcome will be labeled Approved or Rejected and recorded.
