@@ -1,3 +1,4 @@
 # Site basics
 locale: en
-url: "https://ORG_OR_USER.git
+url: "https://uchgsc.github.io"   # replace with your org
+baseurl: ""                       # keep empty on org.github.io
