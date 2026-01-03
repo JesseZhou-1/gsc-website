@@ -11,3 +11,5 @@ main:
     url: /surveys/
   - title: Minutes
     url: /minutes/
+  - title: Dashboard
+    url: /dashboard/
