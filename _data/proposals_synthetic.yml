@@ -1,0 +1,329 @@
+# Synthetic Google Form response data for UI prototyping (YAML)
+# Notes:
+# - Fields match your sheet columns closely.
+# - Empty strings mean “blank cell.”
+# - Optional UI-only fields added at the bottom of each item: status, tags, interest_count, comment_count.
+
+proposals:
+  - Timestamp: "1/4/2026 15:09:49"
+    Name: "Ryo TEST Sato"
+    Event title: "TEST: Apple Picking"
+    Event description: "We go pick apples!"
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Maybe Week 8 or 9 in Winter Quarter?"
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "Uber and also the picking fee"
+    Do you plan to get reimbursement?: "Yes"
+    status: "Idea posted"
+    tags: ["social", "outdoors"]
+    interest_count: 9
+    comment_count: 2
+
+  - Timestamp: "1/3/2026 11:22:10"
+    Name: "Mina K."
+    Event title: "Winter Quarter Coffee Chats"
+    Event description: "Weekly informal coffee hour to meet people across cohorts."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Weeks 2–10, Fridays 3–4pm"
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "Coffee/tea, light snacks"
+    Do you plan to get reimbursement?: "Yes"
+    status: "Shaping"
+    tags: ["social", "community"]
+    interest_count: 21
+    comment_count: 6
+
+  - Timestamp: "1/2/2026 20:05:33"
+    Name: "Daniel R."
+    Event title: "Methods Mini-Workshop: Interview Coding in Practice"
+    Event description: "Hands-on coding session using a short sample transcript + group discussion."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Around Week 4, evening"
+    Do you have a precise budget already?: "Yes"
+    If yes, amount of budget: 65
+    If yes, attach what you want us to order: "snacks_list.pdf"
+    If no, what kind of things are planning to spend on?: ""
+    Do you plan to get reimbursement?: "Yes"
+    status: "Ready for review"
+    tags: ["academic", "methods"]
+    interest_count: 17
+    comment_count: 4
+
+  - Timestamp: "12/29/2025 09:41:02"
+    Name: "Sasha P."
+    Event title: "Hyde Park Walking Tour (New Students)"
+    Event description: "Walk to key spots: grocery, coffee, library, winter gear essentials."
+    Do you have a specific date in mind?: "Yes"
+    If yes, what's the date?: "1/10/2026"
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): ""
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "Hot chocolate at a café"
+    Do you plan to get reimbursement?: "No"
+    status: "Scheduled"
+    tags: ["social", "orientation"]
+    interest_count: 26
+    comment_count: 3
+
+  - Timestamp: "12/28/2025 16:18:54"
+    Name: "Wei L."
+    Event title: "Faculty Research Lightning Talks"
+    Event description: "Short intros from 4–5 faculty + Q&A for students exploring advisors."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Week 2 or 3, lunchtime"
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "Light lunch (sandwiches) + room reservation if needed"
+    Do you plan to get reimbursement?: "Yes"
+    status: "Funding requested"
+    tags: ["professional", "academic"]
+    interest_count: 34
+    comment_count: 9
+
+  - Timestamp: "12/27/2025 13:02:11"
+    Name: "Avery S."
+    Event title: "Game Night: Codenames + Uno"
+    Event description: "Low-stakes hangout to decompress before Week 1 hits."
+    Do you have a specific date in mind?: "Yes"
+    If yes, what's the date?: "1/7/2026"
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): ""
+    Do you have a precise budget already?: "Yes"
+    If yes, amount of budget: 40
+    If yes, attach what you want us to order: "target_wishlist_link.txt"
+    If no, what kind of things are planning to spend on?: ""
+    Do you plan to get reimbursement?: "Yes"
+    status: "Funding approved"
+    tags: ["social"]
+    interest_count: 14
+    comment_count: 1
+
+  - Timestamp: "12/26/2025 21:44:09"
+    Name: "Priya N."
+    Event title: "Writing Accountability Pod (4-week sprint)"
+    Event description: "Weekly check-in + quiet writing hour. Aim: proposals/papers/chapters."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Weeks 3–6, mornings"
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "None (optional coffee BYO)"
+    Do you plan to get reimbursement?: "No"
+    status: "Idea posted"
+    tags: ["academic", "community"]
+    interest_count: 19
+    comment_count: 5
+
+  - Timestamp: "12/22/2025 10:10:47"
+    Name: "Hiro T."
+    Event title: "Intro to R for Sociologists"
+    Event description: "Beginner-friendly walkthrough: tidy data, ggplot, regression basics."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Around Week 5, weekend afternoon"
+    Do you have a precise budget already?: "Yes"
+    If yes, amount of budget: 90
+    If yes, attach what you want us to order: "snacks_costco_list.csv"
+    If no, what kind of things are planning to spend on?: ""
+    Do you plan to get reimbursement?: "Yes"
+    status: "Council review"
+    tags: ["academic", "methods"]
+    interest_count: 28
+    comment_count: 7
+
+  - Timestamp: "12/20/2025 18:33:59"
+    Name: "Leila A."
+    Event title: "Community Partner Mixer"
+    Event description: "Meet local orgs for potential fieldwork, volunteering, and collaborations."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Weeks 6–7, evening"
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "Refreshments + name tags + printing"
+    Do you plan to get reimbursement?: "Yes"
+    status: "Funding requested"
+    tags: ["community", "professional"]
+    interest_count: 23
+    comment_count: 8
+
+  - Timestamp: "12/18/2025 14:09:12"
+    Name: "Sam J."
+    Event title: "Department Picnic (Spring Planning)"
+    Event description: "Early interest check for a spring picnic with families/partners welcome."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Late April (Spring Quarter), weekend"
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "Food + park permit (if needed)"
+    Do you plan to get reimbursement?: "Unsure"
+    status: "Idea posted"
+    tags: ["social", "community"]
+    interest_count: 31
+    comment_count: 4
+
+  - Timestamp: "12/15/2025 08:55:26"
+    Name: "Nora B."
+    Event title: "Guest Speaker: Culture & Algorithms"
+    Event description: "Talk + discussion on algorithmic mediation and cultural change."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Week 7, late afternoon"
+    Do you have a precise budget already?: "Yes"
+    If yes, amount of budget: 350
+    If yes, attach what you want us to order: "speaker_travel_estimate.xlsx"
+    If no, what kind of things are planning to spend on?: ""
+    Do you plan to get reimbursement?: "Yes"
+    status: "Council review"
+    tags: ["academic"]
+    interest_count: 42
+    comment_count: 12
+
+  - Timestamp: "12/12/2025 19:12:03"
+    Name: "Omar Z."
+    Event title: "Job Market AMA (Informal Panel)"
+    Event description: "5th/6th-years share what they wish they knew about the job market."
+    Do you have a specific date in mind?: "Yes"
+    If yes, what's the date?: "2/12/2026"
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): ""
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "Pizza + drinks"
+    Do you plan to get reimbursement?: "Yes"
+    status: "Approved (pending logistics)"
+    tags: ["professional"]
+    interest_count: 25
+    comment_count: 6
+
+  - Timestamp: "12/10/2025 12:01:45"
+    Name: "Fatima E."
+    Event title: "Peer Mentorship Matching (Winter)"
+    Event description: "Match first/second-years with advanced grads for a quarter-long check-in."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Launch Week 1; matches by Week 2"
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "Printing + small kickoff snacks"
+    Do you plan to get reimbursement?: "Yes"
+    status: "Funding approved"
+    tags: ["community", "professional"]
+    interest_count: 38
+    comment_count: 10
+
+  - Timestamp: "12/08/2025 17:46:30"
+    Name: "Theo M."
+    Event title: "Board Game + Dumplings Night"
+    Event description: "Make dumplings together, then board games."
+    Do you have a specific date in mind?: "Yes"
+    If yes, what's the date?: "1/31/2026"
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): ""
+    Do you have a precise budget already?: "Yes"
+    If yes, amount of budget: 120
+    If yes, attach what you want us to order: "dumpling_ingredients_list.txt"
+    If no, what kind of things are planning to spend on?: ""
+    Do you plan to get reimbursement?: "Yes"
+    status: "Funding requested"
+    tags: ["social"]
+    interest_count: 29
+    comment_count: 3
+
+  - Timestamp: "12/05/2025 09:29:18"
+    Name: "Grace W."
+    Event title: "Reading Group: Mische (Projects and Possibilities)"
+    Event description: "Three-session reading group + discussion questions shared in advance."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Weeks 2, 4, and 6, late afternoon"
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "None"
+    Do you plan to get reimbursement?: "No"
+    status: "Idea posted"
+    tags: ["academic"]
+    interest_count: 16
+    comment_count: 2
+
+  - Timestamp: "11/30/2025 15:17:52"
+    Name: "Kai H."
+    Event title: "Conference Prep: Abstract Clinic"
+    Event description: "Bring a draft abstract; get structured peer feedback in small groups."
+    Do you have a specific date in mind?: "Yes"
+    If yes, what's the date?: "1/22/2026"
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): ""
+    Do you have a precise budget already?: "Yes"
+    If yes, amount of budget: 55
+    If yes, attach what you want us to order: "snacks_and_markers.txt"
+    If no, what kind of things are planning to spend on?: ""
+    Do you plan to get reimbursement?: "Yes"
+    status: "Scheduled"
+    tags: ["academic", "professional"]
+    interest_count: 22
+    comment_count: 5
+
+  - Timestamp: "11/25/2025 22:40:06"
+    Name: "Elena V."
+    Event title: "Museum Trip (Group Discount?)"
+    Event description: "Potential weekend museum visit; trying to see if group pricing exists."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Any Saturday in February"
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "Tickets (maybe discounted) + transit"
+    Do you plan to get reimbursement?: "Unsure"
+    status: "Shaping"
+    tags: ["social", "outdoors"]
+    interest_count: 11
+    comment_count: 1
+
+  - Timestamp: "11/18/2025 10:03:27"
+    Name: "Jordan C."
+    Event title: "Workshop: Zotero + Notion Workflow"
+    Event description: "Show a reproducible pipeline from readings to notes to writing outlines."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Week 3, evening"
+    Do you have a precise budget already?: "Yes"
+    If yes, amount of budget: 30
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: ""
+    Do you plan to get reimbursement?: "Yes"
+    status: "Ready for review"
+    tags: ["methods", "professional"]
+    interest_count: 27
+    comment_count: 7
+
+  - Timestamp: "11/12/2025 07:58:41"
+    Name: "Naomi Q."
+    Event title: "Quiet Study Hall (Finals Week)"
+    Event description: "Reserve a room, quiet norms, optional 5-min stretch breaks."
+    Do you have a specific date in mind?: "Not yet"
+    If yes, what's the date?: ""
+    If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter): "Finals Week, 2 sessions"
+    Do you have a precise budget already?: "Not yet"
+    If yes, amount of budget: ""
+    If yes, attach what you want us to order: ""
+    If no, what kind of things are planning to spend on?: "Tea bags + cookies (optional)"
+    Do you plan to get reimbursement?: "Yes"
+    status: "Idea posted"
+    tags: ["community"]
+    interest_count: 20
+    comment_count: 0
