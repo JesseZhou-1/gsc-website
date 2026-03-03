@@ -226,6 +226,85 @@
     margin-top: 0.7rem;
   }
 
+  .ssr-people-grid {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 1.4rem;
+  }
+
+  .ssr-person-card {
+    background: #f7f7f3;
+    border: 1px solid var(--ssr-border);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .ssr-person-card__media {
+    position: relative;
+  }
+
+  .ssr-person-card__image,
+  .ssr-person-card__placeholder {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+  }
+
+  .ssr-person-card__image {
+    display: block;
+    object-fit: cover;
+  }
+
+  .ssr-person-card__placeholder {
+    align-items: center;
+    background: #ecece8;
+    color: var(--ssr-muted);
+    display: flex;
+    font-size: 0.84rem;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    padding: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .ssr-person-card__placeholder--fallback {
+    display: none;
+  }
+
+  .ssr-person-card__body {
+    padding: 0.9rem 0.95rem 1rem;
+  }
+
+  .ssr-person-card__name {
+    font-size: 1.22rem;
+    margin: 0;
+  }
+
+  .ssr-person-card__title,
+  .ssr-person-card__role,
+  .ssr-person-card__email {
+    margin: 0.22rem 0 0;
+  }
+
+  .ssr-person-card__title {
+    color: var(--ssr-text);
+    font-size: 0.94rem;
+  }
+
+  .ssr-person-card__role {
+    color: var(--ssr-muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .ssr-person-card__email {
+    font-size: 0.9rem;
+  }
+
   .ssr-footer-symbol-wrap {
     margin-top: 1.7rem;
     padding-top: 0.35rem;

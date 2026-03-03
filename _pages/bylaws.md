@@ -161,7 +161,3 @@ _Draft incomplete._
 ### Article X. Amendments
 
 _Draft incomplete._
-
-## Previous archived version
-
-- [Bylaws v1](/bylaws/bylaws-v1/)

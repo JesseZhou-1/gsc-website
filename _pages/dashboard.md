@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Dashboard
+title: Activity
 permalink: /dashboard/
 ---
 

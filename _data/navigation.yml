@@ -3,6 +3,10 @@ main:
     url: /
   - title: Bylaws
     url: /bylaws/
+  - title: Board Member
+    url: /board-member/
+  - title: Activity
+    url: /dashboard/
   - title: Key Info
     url: /key-info/
   - title: Funding
@@ -11,5 +15,3 @@ main:
     url: /surveys/
   - title: Minutes
     url: /minutes/
-  - title: Dashboard
-    url: /dashboard/
