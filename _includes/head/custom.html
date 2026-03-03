@@ -1,0 +1,86 @@
+<style>
+  .page__content {
+    max-width: 820px;
+  }
+
+  .masthead {
+    background: #efefed;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .greedy-nav {
+    align-items: center;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .greedy-nav .site-title {
+    color: #4d4f54 !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4.6vw, 3.7rem);
+    font-weight: 400;
+    line-height: 1.02;
+    margin: 0;
+    padding: 0.95rem 0 0.25rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .greedy-nav .site-title::after {
+    color: #878b91;
+    content: "Graduate Student Council";
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(0.68rem, 1.38vw, 1.06rem);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    margin-top: 0.32rem;
+    text-transform: uppercase;
+  }
+
+  .greedy-nav .visible-links {
+    border-top: 1px solid #d8d8d8;
+    float: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0.34rem 0 0.52rem;
+    width: 100%;
+  }
+
+  .greedy-nav .visible-links a {
+    color: #4f5258;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .ssr-footer-symbol-wrap {
+    margin-top: 1.7rem;
+    padding-top: 0.35rem;
+    text-align: center;
+  }
+
+  .ssr-footer-symbol {
+    height: auto;
+    max-width: 360px;
+    mix-blend-mode: multiply;
+    width: 68%;
+  }
+
+  @media (max-width: 720px) {
+    .greedy-nav .site-title {
+      font-size: clamp(1.55rem, 9vw, 2.2rem);
+    }
+
+    .greedy-nav .site-title::after {
+      letter-spacing: 0.1em;
+      margin-top: 0.22rem;
+    }
+
+    .ssr-footer-symbol {
+      width: 92%;
+    }
+  }
+</style>

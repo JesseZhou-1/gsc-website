@@ -3,6 +3,8 @@ locale: en
 url: "https://jessezhou-1.github.io"
 baseurl: "/gsc-website"
 repository: "JesseZhou-1/gsc-website"
+title: "Society for Social Research (Graduate Student Council)"
+masthead_title: "Society for Social Research"
 
 # Theme
 remote_theme: "mmistakes/minimal-mistakes"

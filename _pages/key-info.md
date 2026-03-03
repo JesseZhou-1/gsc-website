@@ -5,10 +5,4 @@ permalink: /key-info/
 comments: true
 ---
 
-Key information resources are stored in Google Drive:
-
-- [Key info folder (Google Drive)](https://drive.google.com/drive/folders/1vBVAmSVp1qK36Ho8yKfcJ1DQfl_ylP7K?ths=true)
-
-## Key info index (titles)
-
-1. [Department quick start](/key-info/department-quick-start/)
+1. [2026 UChicago Sociology Advising Networks](https://docs.google.com/spreadsheets/d/1truj8HjyqRn0w6g-i64NVpamOp5WGFONpll_uALDz0c)
