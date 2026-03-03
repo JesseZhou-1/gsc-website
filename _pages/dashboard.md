@@ -39,13 +39,18 @@ comments: true
 }
 </style>
 
-{% assign proposals = site.data.proposals_synthetic.proposals %}
+{% assign proposals_source = site.data.proposals %}
+{% if proposals_source.proposals %}
+  {% assign proposals = proposals_source.proposals %}
+{% else %}
+  {% assign proposals = proposals_source %}
+{% endif %}
 
 <div class="dashboard-grid">
 {% for item in proposals %}
-  {% assign has_specific = item["Do you have a specific date in mind?:"] %}
-  {% assign specific_date = item["If yes, what's the date?:"] %}
-  {% assign timeframe = item["If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter):"] %}
+  {% assign has_specific = item["Do you have a specific date in mind?"] %}
+  {% assign specific_date = item["If yes: what's the date?"] %}
+  {% assign timeframe = item["If no: about what time are you thinking? (e.g., Around Week 6 Winter Quarter)"] %}
   {% if has_specific == "Yes" and specific_date != "" %}
     {% assign proposed_date = specific_date %}
   {% elsif timeframe != "" %}
@@ -54,7 +59,9 @@ comments: true
     {% assign proposed_date = "TBD" %}
   {% endif %}
   <div class="idea-card">
+    {% if item.status and item.status != "" %}
     <div class="idea-status">{{ item.status }}</div>
+    {% endif %}
     <h3>{{ item["Event title"] }}</h3>
     <p class="idea-meta"><span class="idea-label">Overview:</span> {{ item["Event description"] }}</p>
     <p class="idea-meta"><span class="idea-label">Proposed date:</span> {{ proposed_date }}</p>

@@ -39,7 +39,7 @@ jobs:
           import os
           import yaml
           from google.oauth2 import service_account
-          from googleapiclient.discovery import build
+          from googleapiclient.discoverymport build
           
           svc_json = os.environ.get("GOOGLE_SERVICE_ACCOUNT_JSON")
           if not svc_json:
