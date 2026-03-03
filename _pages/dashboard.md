@@ -5,6 +5,9 @@ permalink: /dashboard/
 comments: true
 ---
 
+This dashboard is currently a prototype.
+If live Google Sheet sync is not configured, it falls back to local sample data.
+
 <style>
 .dashboard-grid {
   display: grid;
@@ -40,17 +43,22 @@ comments: true
 </style>
 
 {% assign proposals_source = site.data.proposals %}
-{% if proposals_source.proposals %}
+{% if proposals_source == nil %}
+  {% assign proposals_source = site.data.proposals_synthetic %}
+{% endif %}
+
+{% if proposals_source and proposals_source.proposals %}
   {% assign proposals = proposals_source.proposals %}
 {% else %}
   {% assign proposals = proposals_source %}
 {% endif %}
 
+{% if proposals and proposals.size > 0 %}
 <div class="dashboard-grid">
 {% for item in proposals %}
   {% assign has_specific = item["Do you have a specific date in mind?"] %}
-  {% assign specific_date = item["If yes: what's the date?"] %}
-  {% assign timeframe = item["If no: about what time are you thinking? (e.g., Around Week 6 Winter Quarter)"] %}
+  {% assign specific_date = item["If yes, what's the date?"] | default: item["If yes: what's the date?"] %}
+  {% assign timeframe = item["If no, about what time are you thinking? (e.g., Around Week 6 Winter Quarter)"] | default: item["If no: about what time are you thinking? (e.g., Around Week 6 Winter Quarter)"] %}
   {% if has_specific == "Yes" and specific_date != "" %}
     {% assign proposed_date = specific_date %}
   {% elsif timeframe != "" %}
@@ -70,3 +78,6 @@ comments: true
   </div>
 {% endfor %}
 </div>
+{% else %}
+No activity data is available yet. Once integration is configured, submitted activities will appear here.
+{% endif %}

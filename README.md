@@ -7,28 +7,57 @@ This repo hosts the public site for the Graduate Student Council. Built with Jek
 ## First-time setup
 
 
-1. Enable **Discussions** in Settings → General.
-2. Create labels: `funding-request`, `pending-review`, `approved`, `rejected`, `lt-500`, `500-999`, `gte-1000`.
-3. Configure **giscus**:
+1. Configure **giscus**:
 - Go to https://giscus.app
 - Choose this repo and a Discussions category (create one if needed, for example `Comments`).
 - Copy the generated `repo_id` and `category_id` and paste into `_config.yml` under `comments.giscus`.
-4. Turn on **GitHub Pages** in Settings → Pages using the `main` branch.
-5. Edit `_data/navigation.yml` to adjust menu items. Edit `_pages/*` content as needed.
+2. Turn on **GitHub Pages** in Settings → Pages using the `main` branch.
+3. Edit `_data/navigation.yml` to adjust menu items. Edit `_pages/*` content as needed.
 
 
-## Funding requests workflow
+## Funding workflow
 
 
-- New requests are submitted via **Issue Forms** at `New issue → Funding request`.
-- The `label-funding-amount.yml` workflow reads the amount and applies a tier label.
-- Officers review, ask for clarifications in comments, and then label as `approved` or `rejected`.
-- For requests at or above the threshold defined in the bylaws, open a **Poll** in Discussions and link it back to the issue.
+- Event funding requests are submitted via the Google Form linked on `/funding/`.
+- Lounge funding requests are submitted via the Google Form linked on `/funding/`.
+- Financial co-chairs review submissions and communicate decisions through council channels.
+
+
+## Minutes, surveys, and key info
+
+
+- `/minutes/`, `/surveys/`, and `/key-info/` are link hubs that point to shared Google Drive folders.
+- Each page can also include a manual title index for quick scanning on the public site.
 
 
 ## Local development
 
 
+This repo uses a Ruby 3 toolchain for local preview and CI (`.ruby-version` is `3.3.10`).
+
+Recommended on macOS:
+
 ```bash
-bundle install
-bundle exec jekyll serve
+brew install ruby@3.3
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+```
+
+Build once:
+
+```bash
+./script/jekyll-build.sh
+```
+
+Run local server:
+
+```bash
+./script/jekyll-serve.sh
+```
+
+
+## Upstream build verification
+
+
+- `.github/workflows/jekyll-ci.yml` builds the site on every push to `main`, pull request, and manual dispatch.
+- CI uploads a `site-preview` artifact for quick visual checks when reviewing changes.
+- GitHub Pages deployment can remain on your current setting; this CI workflow is a validation layer and does not replace deployment by itself.

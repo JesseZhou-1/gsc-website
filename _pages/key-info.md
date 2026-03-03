@@ -5,6 +5,10 @@ permalink: /key-info/
 comments: true
 ---
 
-Quick links and onboarding resources for students. Edit this page through pull requests.
+Key information resources are stored in Google Drive:
 
-- [Department quick start](/key-info/department-quick-start/)
+- [Key info folder (Google Drive)](https://drive.google.com/drive/folders/1vBVAmSVp1qK36Ho8yKfcJ1DQfl_ylP7K?ths=true)
+
+## Key info index (titles)
+
+1. [Department quick start](/key-info/department-quick-start/)

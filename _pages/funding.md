@@ -5,20 +5,23 @@ permalink: /funding/
 comments: true
 ---
 
-We support activities that benefit graduate students. All requests are public. For amounts at or above the voting threshold set in our bylaws, the council will vote in **Discussions**.
+We support activities that benefit graduate students. Funding requests are now submitted through Google Forms.
 
-**Apply for funding:**
+## Request funding
 
-- [Open the funding request form](https://github.com/JesseZhou-1/gsc-website/issues/new?assignees=&labels=funding-request%2Cpending-review&projects=&template=funding.yml&title=Funding+request%3A+%3Cevent+or+project+name%3E)
+- [Event funding request form](https://docs.google.com/forms/d/e/1FAIpQLSfgRVCr3Zs7ZP5_9Wwg_4OYYj5SHPVKmY7xKhz5Qsss4td-FQ/viewform)
+- [Lounge funding request form](https://docs.google.com/forms/d/e/1FAIpQLScLTdSgc0g16tCtpc_UgHUtpb1OCTmTWZ6T_bGzknjuJJ1jWg/viewform)
 
-**Review queue:**
+## What happens next
 
-- [Open requests](https://github.com/JesseZhou-1/gsc-website/issues?q=is%3Aissue+is%3Aopen+label%3Afunding-request)
-- [Approved](https://github.com/JesseZhou-1/gsc-website/issues?q=is%3Aissue+label%3Aapproved)
-- [Rejected](https://github.com/JesseZhou-1/gsc-website/issues?q=is%3Aissue+label%3Arejected)
+Financial co-chairs review incoming requests and follow up if clarification is needed. Decisions and announcements are shared through council communication channels.
 
-**Voting for large requests:**
+## Notes for requesters
 
-If the amount is at or above the threshold, financial co-chairs will open a **Poll** in Discussions and link it here via a comment. After voting closes, we label the request `approved` or `rejected` and record the decision.
+- Submit only one request per event/project.
+- Include clear budget details to speed up review.
+- If your request is urgent, note the deadline in the form.
 
-**Contact:** Financial co-chairs are tagged on each request. Use the comment thread to ask or answer questions.
+## Contact
+
+For questions, contact the Financial Co-Chairs.
