@@ -2,6 +2,7 @@
 locale: en
 url: "https://jessezhou-1.github.io"
 baseurl: "/gsc-website"
+repository: "JesseZhou-1/gsc-website"
 
 # Theme
 remote_theme: "mmistakes/minimal-mistakes"
