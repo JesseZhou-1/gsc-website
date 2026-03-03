@@ -2,7 +2,6 @@
 layout: single
 title: Dashboard
 permalink: /dashboard/
-comments: true
 ---
 
 This dashboard is currently a prototype.
@@ -14,21 +13,27 @@ If live Google Sheet sync is not configured, it falls back to local sample data.
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
+.dashboard-note {
+  color: #767676;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 0.95rem;
+}
 .idea-card {
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
+  border: 1px solid #d6d8da;
+  border-radius: 0;
   padding: 1rem;
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  background: #f8f8f5;
+  box-shadow: none;
 }
 .idea-card h3 {
   margin-top: 0.4rem;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.16rem;
 }
 .idea-meta {
   margin: 0.35rem 0;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
 }
 .idea-label {
   font-weight: 600;
@@ -37,23 +42,33 @@ If live Google Sheet sync is not configured, it falls back to local sample data.
   display: inline-block;
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
-  background: #f2f2f2;
+  background: #ebebe7;
   font-size: 0.8rem;
 }
 </style>
 
 {% assign proposals_source = site.data.proposals %}
-{% if proposals_source == nil %}
-  {% assign proposals_source = site.data.proposals_synthetic %}
-{% endif %}
-
 {% if proposals_source and proposals_source.proposals %}
   {% assign proposals = proposals_source.proposals %}
 {% else %}
   {% assign proposals = proposals_source %}
 {% endif %}
 
+{% assign using_synthetic = false %}
+{% if proposals == nil or proposals.size == 0 %}
+  {% assign proposals_source = site.data.proposals_synthetic %}
+  {% if proposals_source and proposals_source.proposals %}
+    {% assign proposals = proposals_source.proposals %}
+  {% else %}
+    {% assign proposals = proposals_source %}
+  {% endif %}
+  {% assign using_synthetic = true %}
+{% endif %}
+
 {% if proposals and proposals.size > 0 %}
+{% if using_synthetic %}
+<p class="dashboard-note">Showing local sample data while live sheet data is empty.</p>
+{% endif %}
 <div class="dashboard-grid">
 {% for item in proposals %}
   {% assign has_specific = item["Do you have a specific date in mind?"] %}

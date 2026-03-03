@@ -2,7 +2,6 @@
 layout: single
 title: Bylaws
 permalink: /bylaws/
-comments: false
 ---
 
 This page displays the current working bylaws draft directly on the website.

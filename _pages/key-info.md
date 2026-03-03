@@ -2,7 +2,7 @@
 layout: single
 title: Key information
 permalink: /key-info/
-comments: true
 ---
 
-1. [2026 UChicago Sociology Advising Networks](https://docs.google.com/spreadsheets/d/1truj8HjyqRn0w6g-i64NVpamOp5WGFONpll_uALDz0c)
+{% assign items = site.data.key_info_items | sort: "date" | reverse %}
+{% include resource-list.html items=items empty_message="No key information entries have been posted yet." %}

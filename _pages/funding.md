@@ -2,15 +2,14 @@
 layout: single
 title: Funding
 permalink: /funding/
-comments: true
 ---
 
 We support activities that benefit graduate students. Funding requests are now submitted through Google Forms.
 
 ## Request funding
 
-- [Event funding request form](https://docs.google.com/forms/d/e/1FAIpQLSfgRVCr3Zs7ZP5_9Wwg_4OYYj5SHPVKmY7xKhz5Qsss4td-FQ/viewform)
-- [Lounge funding request form](https://docs.google.com/forms/d/e/1FAIpQLScLTdSgc0g16tCtpc_UgHUtpb1OCTmTWZ6T_bGzknjuJJ1jWg/viewform)
+{% assign items = site.data.funding_items | sort: "date" | reverse %}
+{% include resource-list.html items=items empty_message="No funding forms are available yet." %}
 
 ## What happens next
 

@@ -1,0 +1,24 @@
+{% assign nav_links = site.data.navigation.main %}
+<div class="masthead ssr-masthead">
+  <div class="ssr-masthead__inner">
+    <a class="ssr-site-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: "Society for Social Research" }}</a>
+    <div class="ssr-site-subtitle">Graduate Student Council</div>
+  </div>
+  <nav id="site-nav" class="ssr-primary-nav" aria-label="Primary navigation">
+    <ul class="ssr-primary-nav__list">
+      {% for link in nav_links %}
+        {% assign page_url = page.url | replace: "index.html", "" | relative_url %}
+        {% assign link_url = link.url | relative_url %}
+        {% assign active = false %}
+        {% if page_url == link_url %}
+          {% assign active = true %}
+        {% elsif link.url != '/' and page_url contains link_url %}
+          {% assign active = true %}
+        {% endif %}
+        <li class="ssr-primary-nav__item{% if active %} is-active{% endif %}">
+          <a href="{{ link_url }}">{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

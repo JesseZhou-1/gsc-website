@@ -1,59 +1,229 @@
 <style>
-  .page__content {
-    max-width: 820px;
-  }
-
-  .masthead {
-    background: #efefed;
-    border-bottom: 1px solid #d8d8d8;
-  }
-
-  .greedy-nav {
-    align-items: center;
-    background: transparent;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .greedy-nav .site-title {
-    color: #4d4f54 !important;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2rem, 4.6vw, 3.7rem);
+  @font-face {
+    font-display: swap;
+    font-family: "UChicago Sans";
+    font-style: normal;
     font-weight: 400;
-    line-height: 1.02;
-    margin: 0;
-    padding: 0.95rem 0 0.25rem;
-    text-align: center;
-    width: 100%;
+    src: url("https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-Regular.woff2") format("woff2");
   }
 
-  .greedy-nav .site-title::after {
-    color: #878b91;
-    content: "Graduate Student Council";
-    display: block;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: clamp(0.68rem, 1.38vw, 1.06rem);
+  @font-face {
+    font-display: swap;
+    font-family: "UChicago Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-Bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "UChicago Serif";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "UChicago Serif";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-Bold.woff2") format("woff2");
+  }
+
+  :root {
+    --ssr-maroon: #800000;
+    --ssr-text: #4d4d4d;
+    --ssr-muted: #767676;
+    --ssr-bg: #f1f1ed;
+    --ssr-nav-bg: #ebebe7;
+    --ssr-border: #d0d2d4;
+    --ssr-link: #417181;
+  }
+
+  html,
+  body {
+    background: var(--ssr-bg);
+    color: var(--ssr-text);
+    font-family: "UChicago Sans", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .ssr-masthead {
+    border-bottom: 1px solid var(--ssr-border);
+  }
+
+  .ssr-masthead__inner {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0.85rem 1rem 0.35rem;
+    text-align: center;
+  }
+
+  .ssr-site-title {
+    color: var(--ssr-text);
+    display: inline-block;
+    font-family: "UChicago Serif", Georgia, serif;
+    font-size: clamp(2.05rem, 4.8vw, 3.95rem);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .ssr-site-title:hover,
+  .ssr-site-title:focus {
+    color: var(--ssr-text);
+    text-decoration: none;
+  }
+
+  .ssr-site-subtitle {
+    color: var(--ssr-muted);
+    font-size: clamp(0.72rem, 1.4vw, 1.08rem);
     font-weight: 700;
     letter-spacing: 0.14em;
-    margin-top: 0.32rem;
+    margin-top: 0.35rem;
     text-transform: uppercase;
   }
 
-  .greedy-nav .visible-links {
-    border-top: 1px solid #d8d8d8;
-    float: none;
+  .ssr-primary-nav {
+    background: var(--ssr-nav-bg);
+    border-top: 1px solid var(--ssr-border);
+    padding: 0 0.9rem;
+  }
+
+  .ssr-primary-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.4rem;
     justify-content: center;
-    margin: 0;
-    padding: 0.34rem 0 0.52rem;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0.48rem 0 0.5rem;
+  }
+
+  .ssr-primary-nav__item a {
+    border-bottom: 3px solid transparent;
+    color: var(--ssr-text);
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    padding: 0.25rem 0.08rem 0.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .ssr-primary-nav__item a:hover,
+  .ssr-primary-nav__item a:focus,
+  .ssr-primary-nav__item.is-active a {
+    border-bottom-color: #626971;
+    color: #3f434a;
+  }
+
+  .greedy-nav,
+  .greedy-nav__toggle,
+  .hidden-links {
+    display: none !important;
+  }
+
+  .page,
+  .archive {
+    margin: 0 auto;
+    max-width: 920px;
     width: 100%;
   }
 
-  .greedy-nav .visible-links a {
-    color: #4f5258;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+  .page__title,
+  .archive__subtitle,
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--ssr-text);
+    font-family: "UChicago Serif", Georgia, serif;
+    font-weight: 700;
+  }
+
+  .page__content p,
+  .page__content li,
+  .archive__item-excerpt {
+    color: var(--ssr-text);
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  a {
+    color: var(--ssr-link);
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.14em;
+  }
+
+  a:hover,
+  a:focus {
+    color: #2f5f70;
+  }
+
+  .ssr-intro {
+    margin-bottom: 1.65rem;
+  }
+
+  .ssr-section-heading {
+    border-top: 1px solid var(--ssr-border);
+    margin-top: 0.4rem;
+    padding-top: 1.1rem;
+  }
+
+  .ssr-resource-list {
+    margin: 0;
+    padding-left: 1.3rem;
+  }
+
+  .ssr-resource-list__item {
+    margin-bottom: 1rem;
+  }
+
+  .ssr-resource-list__meta {
+    color: var(--ssr-muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    margin: 0.2rem 0 0;
     text-transform: uppercase;
+  }
+
+  .ssr-resource-more {
+    border-top: 1px solid var(--ssr-border);
+    margin-top: 0.7rem;
+    padding-top: 0.7rem;
+  }
+
+  .ssr-resource-more summary {
+    color: var(--ssr-text);
+    cursor: pointer;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  .ssr-resource-more summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .ssr-resource-more summary::after {
+    content: " +";
+  }
+
+  .ssr-resource-more[open] summary::after {
+    content: " -";
+  }
+
+  .ssr-resource-more .ssr-resource-list {
+    margin-top: 0.7rem;
   }
 
   .ssr-footer-symbol-wrap {
@@ -64,23 +234,33 @@
 
   .ssr-footer-symbol {
     height: auto;
-    max-width: 360px;
+    max-width: 380px;
     mix-blend-mode: multiply;
     width: 68%;
   }
 
-  @media (max-width: 720px) {
-    .greedy-nav .site-title {
-      font-size: clamp(1.55rem, 9vw, 2.2rem);
+  @media (max-width: 760px) {
+    .ssr-site-title {
+      font-size: clamp(1.6rem, 9vw, 2.4rem);
     }
 
-    .greedy-nav .site-title::after {
+    .ssr-site-subtitle {
       letter-spacing: 0.1em;
-      margin-top: 0.22rem;
+    }
+
+    .ssr-primary-nav__list {
+      gap: 0.2rem 0.95rem;
+      justify-content: flex-start;
+      padding-left: 0.3rem;
+      padding-right: 0.3rem;
+    }
+
+    .ssr-primary-nav__item a {
+      font-size: 0.84rem;
     }
 
     .ssr-footer-symbol {
-      width: 92%;
+      width: 90%;
     }
   }
 </style>

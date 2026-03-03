@@ -1,0 +1,40 @@
+{% assign items = include.items %}
+{% assign list_limit = include.limit | default: 5 %}
+
+{% if items and items.size > 0 %}
+<ol class="ssr-resource-list">
+{% for item in items limit:list_limit %}
+  <li class="ssr-resource-list__item">
+    <a href="{{ item.url }}">{{ item.title }}</a>
+    {% if item.date or item.section %}
+    <p class="ssr-resource-list__meta">
+      {% if include.show_section and item.section %}{{ item.section }}{% endif %}
+      {% if include.show_section and item.section and item.date %} | {% endif %}
+      {% if item.date %}{{ item.date | date: "%B %-d, %Y" }}{% endif %}
+    </p>
+    {% endif %}
+  </li>
+{% endfor %}
+</ol>
+{% if items.size > list_limit %}
+<details class="ssr-resource-more">
+  <summary>For more, click-dragdown</summary>
+  <ol class="ssr-resource-list" start="{{ list_limit | plus: 1 }}">
+  {% for item in items offset:list_limit %}
+    <li class="ssr-resource-list__item">
+      <a href="{{ item.url }}">{{ item.title }}</a>
+      {% if item.date or item.section %}
+      <p class="ssr-resource-list__meta">
+        {% if include.show_section and item.section %}{{ item.section }}{% endif %}
+        {% if include.show_section and item.section and item.date %} | {% endif %}
+        {% if item.date %}{{ item.date | date: "%B %-d, %Y" }}{% endif %}
+      </p>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ol>
+</details>
+{% endif %}
+{% else %}
+{{ include.empty_message | default: "No items are available yet." }}
+{% endif %}
